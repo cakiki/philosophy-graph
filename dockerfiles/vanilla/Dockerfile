@@ -43,7 +43,7 @@ RUN set -x \
   && conda config --append channels anaconda \
   && conda install --yes -c conda-forge rise \
   && conda install --yes -c pytorch faiss-cpu \
-  && pip install --use-feature=2020-resolver Sphinx==3.3.1 elasticsearch-dsl elasticsearch Pillow parsel scrapy beautifulsoup4 panel param holoviews datashader tensorflow-probability transformers[sentencepiece] pandas tensorflow_hub sparqlwrapper nltk spacy emoji gensim node2vec umap-learn GPyOpt mmh3 plotly\
+  && pip install --use-feature=2020-resolver Sphinx==3.3.1 elasticsearch-dsl elasticsearch Pillow parsel scrapy beautifulsoup4 panel param holoviews datashader tensorflow-probability transformers[sentencepiece] pandas tensorflow_hub sparqlwrapper nltk spacy emoji gensim node2vec umap-learn GPyOpt mmh3 plotly pymediawiki\
   && python -m spacy download en_core_web_sm \ 
   && pip install git+https://github.com/justinnbt/SnaPy \
   && conda clean --all -f -y \

@@ -20,7 +20,7 @@ docker-run-network-jupyter:
 fix-permissions:
 	sudo chown -R 1000:1000 .
 docker-start-elastic:
-	docker run --rm -it --mount type=bind,source=./ES,target=/usr/share/elasticsearch/data \
+	docker run --rm -it --mount type=bind,source=${PWD}/ES,target=/usr/share/elasticsearch/data \
 		--network host --env discovery.type=single-node \
 		docker.elastic.co/elasticsearch/elasticsearch:7.10.1
 
