@@ -1,0 +1,5 @@
+ES with HTML stripping. JUST STRIP WITH BS4
+Panel search app
+scann or faiss?
+SPECTER
+
