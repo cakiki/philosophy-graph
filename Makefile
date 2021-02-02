@@ -12,6 +12,11 @@ docker-run-gpu-jupyter:
 		-v ${PWD}:/tf \
 		-w /tf \
 		wcm-image-gpu:0.0.2
+docker-run-network-gpu-jupyter:
+	docker run --rm -ti --network host \
+		-v ${PWD}:/tf \
+		-w /tf \
+		wcm-image-gpu:0.0.2
 docker-run-network-jupyter:
 	docker run --rm -ti --network host \
 		-v ${PWD}:/tf \
