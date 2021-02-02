@@ -1,1 +1,3 @@
 virtuoso-sparql-endpoint-quickstart
+.*
+!/.gitignore
