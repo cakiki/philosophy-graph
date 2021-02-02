@@ -8,12 +8,12 @@ docker-run-vanilla-jupyter:
 		-w /tf \
 		wcm-image-vanilla:0.0.2
 docker-run-gpu-jupyter:
-	docker run --rm -ti -p 8888:8888 -p 6666:6666 \
+	docker run --rm --gpus all -ti -p 8888:8888 -p 6666:6666 \
 		-v ${PWD}:/tf \
 		-w /tf \
 		wcm-image-gpu:0.0.2
 docker-run-network-gpu-jupyter:
-	docker run --rm -ti --network host \
+	docker run --rm -ti --gpus all --network host \
 		-v ${PWD}:/tf \
 		-w /tf \
 		wcm-image-gpu:0.0.2
@@ -27,7 +27,4 @@ fix-permissions:
 docker-start-elastic:
 	docker run --rm -it --mount type=bind,source=${PWD}/ES,target=/usr/share/elasticsearch/data \
 		--network host --env discovery.type=single-node \
-		docker.elastic.co/elasticsearch/elasticsearch:7.10.1
-
-
-						
+		docker.elastic.co/elasticsearch/elasticsearch:7.10.1	
